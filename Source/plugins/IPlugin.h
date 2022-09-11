@@ -55,6 +55,9 @@ namespace PluginHost {
             virtual void Activated(const string& callsign, IShell* plugin) = 0;
             virtual void Deactivated(const string& callsign, IShell* plugin) = 0;
             virtual void Unavailable(const string& callsign, IShell* plugin) = 0;
+
+            virtual void Initialized(const string& callsign, IShell* plugin) {};
+            virtual void Deinitialized(const string& callsign, IShell* plugin) {};
         };
 
         ~IPlugin() override = default;
